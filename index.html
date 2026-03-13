@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sự thật về Gấu Trúc 🐼</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f1f8e9;
+        overflow-x: hidden;
+        color: #333;
+      }
+
+      .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(180deg, #dcedc8 0%, #f1f8e9 100%);
+      }
+
+      .hero h1 {
+        color: #33691e;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        padding: 0 20px;
+      }
+      .hero p {
+        color: #558b2f;
+        font-size: 1.1rem;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        border-left: 12px solid #aed581;
+        border-radius: 5px;
+      }
+
+      .story-card {
+        background: white;
+        padding: 25px;
+        border-radius: 20px;
+        margin-bottom: 70px;
+        margin-left: 40px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: all 0.8s ease-out;
+        position: relative;
+      }
+
+      .story-card.show {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .story-card img {
+        width: 100%;
+        border-radius: 12px;
+        margin-top: 15px;
+      }
+      .story-card h3 {
+        color: #2e7d32;
+        margin-top: 0;
+        font-size: 1.4rem;
+      }
+
+      /* Vùng chứa 2 nút bấm */
+      .action-buttons {
+        position: relative;
+        margin-top: 30px;
+        min-height: 80px; /* Để có không gian cho nút chạy trốn */
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .btn-yes {
+        padding: 12px 30px;
+        background-color: #689f38;
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: transform 0.2s;
+        box-shadow: 0 4px 10px rgba(104, 159, 56, 0.4);
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .btn-yes:hover {
+        transform: scale(1.1);
+        background-color: #33691e;
+      }
+
+      .btn-no {
+        padding: 12px 20px;
+        background-color: #e0e0e0;
+        color: #555;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition:
+          top 0.2s,
+          left 0.2s;
+      }
+
+      #panda {
+        position: fixed;
+        left: calc(50% - 390px);
+        top: 50%;
+        font-size: 45px;
+        z-index: 100;
+        pointer-events: none;
+      }
+
+      @media (max-width: 850px) {
+        #panda {
+          left: 5px;
+          font-size: 35px;
+        }
+        .timeline {
+          margin-left: 30px;
+          border-left-width: 8px;
+        }
+        .story-card {
+          margin-left: 20px;
+          padding: 20px;
+        }
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .action-buttons {
+          flex-direction: column;
+          min-height: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="panda">🐼</div>
+
+    <div class="hero">
+      <h1>Helluu</h1>
+      <p>Thử cuộn xuống xem gấu trúc mang gì tới nhé 👇</p>
+    </div>
+
+    <div class="timeline">
+      <div class="story-card">
+        <h3>Cùng xem Gấu Trúc có những thú vị gì nha🌱</h3>
+        <p>
+          Đột nhiên có ý tưởng nên làm cái này để thư giãn cuối tuần xíu nheeee
+        </p>
+        <img
+          src="https://i.pinimg.com/1200x/ad/4a/82/ad4a8295e3e63a0476992ad36419ebfc.jpg"
+          alt="Gấu trúc ngơ ngác"
+        />
+      </div>
+
+      <div class="story-card">
+        <h3>Sự thật số 1 về Gấu Trúc 🎋</h3>
+        <p>
+          Bạn có biết Gấu trúc dành đến 14 tiếng mỗi ngày chỉ để nhai lá tre
+          không? Gấu trúc lớn dành hơn 12 đến 14 tiếng mỗi ngày chỉ để nhai tre,
+          trúc và tiêu thụ một lượng khổng lồ (lên tới 12-38kg) để có đủ dinh
+          dưỡng. Do hệ tiêu hóa giống loài ăn thịt nhưng lại ăn thực vật nghèo
+          dinh dưỡng, chúng phải ăn liên tục và ngủ nghỉ thời gian còn lại để
+          tiết kiệm năng lượng.
+        </p>
+        <img
+          src="https://i.pinimg.com/736x/0a/6b/49/0a6b497939b7e2bea9fb37e0cf2e16cb.jpg"
+          alt="Gấu trúc ăn tre"
+        />
+      </div>
+
+      <div class="story-card">
+        <h3>Sự thật số 2 về Gấu Trúc 🐾</h3>
+        <p>
+          Gấu trúc trông mập mạp lười biếng vậy thôi, nhưng chúng trèo cây cực
+          kỳ giỏi? Chính xác luôn! Trông bộ dạng phục phịch và lúc nào cũng nằm
+          ườn ra nhai lá trúc thế thôi, nhưng gấu trúc thực chất lại là những
+          "nhà leo núi" vô cùng cừ khôi trong thế giới tự nhiên. Dưới đây là một
+          vài sự thật thú vị đằng sau khả năng đặc biệt này và sự "lười biếng"
+          đáng yêu của chúng: Trang bị hoàn hảo: Gấu trúc sở hữu hai chân trước
+          rất khỏe cùng bộ móng vuốt sắc bén, cong dài, giúp chúng bám cực kỳ
+          chắc vào lớp vỏ cây dốc đứng. Học kỹ năng từ bé: Gấu trúc con đã bắt
+          đầu học trèo cây từ khi mới 5-6 tháng tuổi. Đây là một trong những kỹ
+          năng sinh tồn đầu tiên và quan trọng nhất mà chúng phải thành thạo.
+          Mục đích trèo cây: Chúng leo lên cao không chỉ để chơi đùa mà còn để
+          lẩn tránh kẻ thù (như báo gấm hay chó rừng thường đe dọa gấu trúc
+          con), phơi nắng, hoặc đơn giản là tìm một nhánh cây êm ái để đánh một
+          giấc an toàn. Lý do thực sự cho việc "lười biếng": Sở dĩ chúng ta hay
+          thấy chúng nằm một chỗ là vì chế độ ăn (chiếm đến 99% là tre, trúc)
+          cung cấp rất ít dinh dưỡng. Để bảo toàn thể lực, chúng buộc phải hoạt
+          động chậm chạp, hạn chế di chuyển khi không cần thiết và ngủ khoảng
+          10-16 tiếng mỗi ngày. Ngoài khả năng leo trèo, gấu trúc còn là những
+          tay bơi lội rất cừ để vượt qua các con suối trong rừng nữa đấy!
+        </p>
+        <img
+          src="https://i.pinimg.com/1200x/3c/96/24/3c962438f0609d4d47026a7a45123af8.jpg"
+          alt="Gấu trúc trèo cây"
+        />
+      </div>
+
+      <div
+        class="story-card"
+        style="
+          text-align: center;
+          border: 2px dashed #aed581;
+          background-color: #f9fbe7;
+        "
+      >
+        <h3>Một lời chú ý nhỏ 🎁</h3>
+        <p>
+          Cuối tuần này, chưa có việc gì thì đi tìm hiểu về Gấu Trúc với mình
+          tiếp nè ☺️
+        </p>
+        <img
+          src="https://i.pinimg.com/736x/b4/1e/7d/b41e7d54d6982730daa3223efa32f772.jpg"
+          alt="Gấu trúc trèo cây"
+        />
+      </div>
+    </div>
+
+    <script>
+      // Hiệu ứng cuộn gấu trúc
+      const panda = document.getElementById("panda");
+      window.addEventListener("scroll", () => {
+        let scrollY = window.scrollY;
+        let wiggle = scrollY % 40 < 20 ? 12 : -12;
+        panda.style.transform = `translateY(-50%) rotate(${wiggle}deg)`;
+      });
+
+      // Hiệu ứng hiện card
+      const storyCards = document.querySelectorAll(".story-card");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
+
+      storyCards.forEach((card) => observer.observe(card));
+
+      // HIỆU ỨNG NÚT CHẠY TRỐN
+      const btnNo = document.getElementById("runaway-btn");
+
+      btnNo.addEventListener("mouseover", function () {
+        // Lấy kích thước trình duyệt
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        // Tính toán vị trí ngẫu nhiên mới (tránh bay ra khỏi màn hình)
+        const randomX =
+          Math.floor(Math.random() * (windowWidth - 150)) -
+          windowWidth / 2 +
+          75;
+        const randomY = Math.floor(Math.random() * 200) - 100; // Nhảy lên xuống trong khoảng 200px
+
+        // Áp dụng vị trí mới
+        this.style.position = "absolute";
+        this.style.transform = `translate(${randomX}px, ${randomY}px)`;
+      });
+
+      // Dành cho điện thoại (chạm vào là chạy)
+      btnNo.addEventListener("touchstart", function (e) {
+        e.preventDefault(); // Ngăn không cho bấm trúng
+        const windowWidth = window.innerWidth;
+        const randomX =
+          Math.floor(Math.random() * (windowWidth - 100)) -
+          windowWidth / 2 +
+          50;
+        const randomY = Math.floor(Math.random() * 150) - 75;
+
+        this.style.position = "absolute";
+        this.style.transform = `translate(${randomX}px, ${randomY}px)`;
+      });
+    </script>
+  </body>
+</html>
